@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineMax - Movie Search</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">CineMax</div>
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Search for movies..." id="searchInput">
+        </div>
+    </div>
+
+    <div class="hero-section" id="heroSection">
+        <h1 class="hero-title">Discover Amazing Movies</h1>
+        <p class="hero-subtitle">Explore thousands of movies with detailed information and trailers</p>
+        
+        <div class="filters">
+            <button class="filter-btn active" data-category="popular">Popular</button>
+            <button class="filter-btn" data-category="top_rated">Top Rated</button>
+            <button class="filter-btn" data-category="upcoming">Upcoming</button>
+            <button class="filter-btn" data-category="now_playing">Now Playing</button>
+        </div>
+    </div>
+
+    <div class="loading" id="loading" style="display: none;">
+        <div class="spinner"></div>
+        Loading movies...
+    </div>
+
+    <div class="movies-grid" id="moviesGrid"></div>
+
+    <div class="no-results" id="noResults" style="display: none;">
+        <div class="no-results-icon">🎬</div>
+        <h3>No movies found</h3>
+        <p>Try searching with different keywords</p>
+    </div>
+
+    <div class="modal" id="movieModal">
+        <div class="modal-content">
+            <button class="close-btn" id="closeModal">&times;</button>
+            <div class="modal-header">
+                <img class="modal-backdrop" id="modalBackdrop" src="" alt="">
+                <div class="modal-overlay">
+                    <h2 class="modal-title" id="modalTitle"></h2>
+                    <div class="modal-details">
+                        <span id="modalYear"></span>
+                        <span id="modalRuntime"></span>
+                        <span id="modalGenres"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <p class="modal-overview" id="modalOverview"></p>
+                <div class="modal-stats">
+                    <div class="stat">
+                        <div class="stat-value" id="modalRating"></div>
+                        <div class="stat-label">Rating</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value" id="modalVotes"></div>
+                        <div class="stat-label">Votes</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value" id="modalPopularity"></div>
+                        <div class="stat-label">Popularity</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value" id="modalBudget"></div>
+                        <div class="stat-label" title="Budget information is not always available">Budget</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
