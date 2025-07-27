@@ -148,7 +148,6 @@ body {
 .movie-card {
     background: rgba(255, 255, 255, 0.05);
     border-radius: 20px;
-    overflow: hidden;
     transition: all 0.4s ease;
     cursor: pointer;
     backdrop-filter: blur(10px);
@@ -221,7 +220,6 @@ body {
     margin: 50px auto;
     background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%);
     border-radius: 20px;
-    overflow: hidden;
     animation: slideIn 0.4s ease;
 }
 
@@ -233,7 +231,6 @@ body {
 .modal-header {
     position: relative;
     height: 400px;
-    overflow: hidden;
 }
 
 .modal-backdrop {
