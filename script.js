@@ -175,7 +175,6 @@ async function showMovieModal(movieId) {
     document.getElementById('modalBudget').textContent = formatCurrency(movie.budget);
 
     movieModal.style.display = 'block';
-    document.body.style.overflow = 'hidden';
 }
 
 
